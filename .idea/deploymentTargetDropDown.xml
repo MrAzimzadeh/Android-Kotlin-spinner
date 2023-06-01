@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\azimz\.android\avd\Galaxy_S23_Ultra_API_33.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="e195efe5" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-06-01T12:24:33.957822500Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-06-01T12:29:44.904051Z" />
   </component>
 </project>

@@ -2,10 +2,12 @@ package com.azimzada.spinnerkullanimi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import android.widget.Toast
 import com.azimzada.spinnerkullanimi.databinding.ActivityMainBinding
 
@@ -54,11 +56,23 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.button2.setOnClickListener() {
-            Toast.makeText(
-                applicationContext,
-                "Ulke ${ulkeler[binding.spinner2.selectedItemPosition]}  ///////////////----------",
-                Toast.LENGTH_SHORT
-            ).show()
+/*            Toast.makeText(
+//                applicationContext,
+//                "Ulke ${ulkeler[binding.spinner2.selectedItemPosition]}  ///////////////----------",
+//                Toast.LENGTH_SHORT
+//            ).show()
+*/
+
+            val tasarim = layoutInflater.inflate(R.layout.toast_tasarim, null)
+            val textMesaj = tasarim.findViewById(R.id.textView) as TextView
+            textMesaj.text = "Merahaba ozel Mesaj "
+
+            val toastOzel = Toast(applicationContext)
+            toastOzel.view = tasarim
+            toastOzel.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL, 0, 0)
+
+            toastOzel.duration =Toast.LENGTH_SHORT
+            toastOzel.show()
 
         }
 
